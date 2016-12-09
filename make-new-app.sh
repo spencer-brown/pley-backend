@@ -32,12 +32,13 @@ fi
 
 # TODO: Validate subdomain?
 
+# TODO: Use randome app name instead of using the subdomain as the app name.
 # Generate a random name for the application so that it does not conflict with the names of other apps.
-APP_NAME=$(cat /dev/urandom | tr -dc 'a-z' | fold -w 15 | head -n 1)
+# APP_NAME=$(cat /dev/urandom | tr -dc 'a-z' | fold -w 15 | head -n 1)
 
 # Run commands.
-oc new-app $GIT_URL --name=$APP_NAME --labels=userId=$USER_ID
-oc expose service $APP_NAME --hostname=$SUBDOMAIN.usb.cs.purdue.edu
+oc new-app $GIT_URL --name=$SUBDOMAIN --labels=userId=$USER_ID
+oc expose service $SUBDOMAIN --hostname=$SUBDOMAIN.usb.cs.purdue.edu
 
 # Assume success.
 exit 0
