@@ -1,0 +1,16 @@
+{
+  "name": "pley-backend",
+  "version": "0.0.0",
+  "description": "Backend server for managing openshift scripts and configuration.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
