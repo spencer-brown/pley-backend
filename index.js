@@ -38,7 +38,7 @@ app.post('/new-app', function(req, res, next) {
 
   const cmd = './make-new-app.sh' + ' ' + githubURL + ' ' + subdomain + ' ' + userId;
 
-  cp.exec(cmd, (err, stdout, stderr) => {
+  cp.exec(cmd, function(err, stdout, stderr) {
     console.log('./make-new-app.sh finished');
 
     console.log('err', err);
